@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#170b20" />
+  <meta name="description" content="A little universe made just for you." />
+  <title>For You — A Birthday Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <canvas id="universe"></canvas>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">✳</span> a little universe</a>
+    <button class="sound-toggle" id="soundToggle" aria-label="Toggle music"><span class="sound-bars">♫</span><span id="soundLabel">SOUND OFF</span></button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-kicker reveal"><span class="kicker-line"></span> MADE WITH LOVE, JUST FOR YOU <span class="kicker-line"></span></div>
+      <div class="hero-copy">
+        <p class="eyebrow reveal">TO THE MOST WONDERFUL SOUL</p>
+        <h1 class="hero-title reveal">Today, the<br><em>universe</em> celebrates <span class="you-word">you.</span></h1>
+        <p class="hero-sub reveal">A tiny corner of the internet, made to remind you<br class="desktop-only"> how incredibly special you are.</p>
+        <button class="primary-btn reveal" id="beginBtn">Open your little surprise <span>↗</span></button>
+      </div>
+      <div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 / 04</span></div>
+      <div class="floating-note note-left">you are magic <span>✧</span></div>
+      <div class="floating-note note-right">a day as lovely as you <span>♡</span></div>
+    </section>
+
+    <section class="letter-section section" id="letter">
+      <div class="section-heading reveal"><span class="section-index">01 — A NOTE FOR YOU</span><span class="tiny-star">✳</span></div>
+      <div class="letter-layout">
+        <div class="letter-intro reveal">
+          <p class="eyebrow">SOME WORDS FROM THE HEART</p>
+          <h2>To someone<br>who makes life<br><em>more beautiful.</em></h2>
+          <p class="muted">If I could wrap all my wishes into one little letter, it would look something like this.</p>
+          <div class="signature">with love, <span>♡</span></div>
+        </div>
+        <article class="letter-card reveal">
+          <div class="letter-top"><span>✧ A LETTER FOR YOU ✧</span><span>EST. TODAY</span></div>
+          <div class="letter-content">
+            <p class="letter-dear">Dear <span data-name>Beautiful</span>,</p>
+            <p>Happy birthday to you. I hope this new chapter brings you the kind of happiness that stays, the kind of peace that feels like home, and countless little reasons to smile.</p>
+            <p>Never forget how much light you bring into the world just by being yourself. Keep dreaming, keep growing, and keep being wonderfully you.</p>
+            <p>May every page ahead be softer, brighter, and filled with beautiful surprises. You deserve all of it.</p>
+            <p class="letter-end">With all my love, <span>♡</span></p>
+          </div>
+          <div class="letter-flower">✿</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="memories-section section" id="memories">
+      <div class="section-heading reveal"><span class="section-index">02 — LITTLE MOMENTS</span><span class="tiny-star">✳</span></div>
+      <div class="memories-title reveal"><p class="eyebrow">A FEW MOMENTS WORTH KEEPING</p><h2>Collected <em>memories.</em></h2><p class="muted">Some moments become memories. Some people make them unforgettable.</p></div>
+      <div class="gallery">
+        <figure class="photo photo-one reveal"><img src="assets/photos/image1.png" alt="A favorite memory" onerror="this.style.display='none';this.parentElement.classList.add('photo-placeholder')"><figcaption><span>01</span> the little things</figcaption></figure>
+        <figure class="photo photo-two reveal"><img src="assets/photos/image2.png" alt="A beautiful moment" onerror="this.style.display='none';this.parentElement.classList.add('photo-placeholder')"><figcaption><span>02</span> golden memories</figcaption></figure>
+        <figure class="photo photo-three reveal"><img src="assets/photos/image3.png" alt="A happy day" onerror="this.style.display='none';this.parentElement.classList.add('photo-placeholder')"><figcaption><span>03</span> moments like these</figcaption></figure>
+      </div>
+      <p class="gallery-hint reveal">✧ Replace these frames with your favorite photos in <code>assets/photos/</code>.</p>
+    </section>
+
+    <section class="wish-section section" id="wish">
+      <div class="section-heading reveal"><span class="section-index">03 — MAKE A WISH</span><span class="tiny-star">✳</span></div>
+      <div class="wish-content reveal">
+        <div class="wish-orb"><div class="orb-core"></div><span class="orb-spark spark-a">✧</span><span class="orb-spark spark-b">✦</span><span class="orb-spark spark-c">✧</span></div>
+        <p class="eyebrow">CLOSE YOUR EYES FOR A SECOND</p>
+        <h2>Make a wish.<br><em>Let it find you.</em></h2>
+        <p class="muted">Whatever your heart is wishing for, may the universe be quietly working to make it happen.</p>
+        <button class="primary-btn" id="wishBtn">Send my wish into the universe <span>✧</span></button>
+        <p class="wish-feedback" id="wishFeedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="final-section section" id="final">
+      <div class="final-frame reveal">
+        <span class="final-star">✳</span>
+        <p class="eyebrow">AND BEFORE YOU GO...</p>
+        <h2>Never forget<br>you are <em>so loved.</em></h2>
+        <p>Here's to another trip around the sun.<br>May it be your most beautiful one yet.</p>
+        <div class="final-sign">Happy Birthday <span data-name>Beautiful</span> <b>♡</b></div>
+        <button class="text-btn" id="replayBtn">↺ Experience it again</button>
+      </div>
+      <footer><span>MADE WITH ♡</span><span>A LITTLE UNIVERSE, JUST FOR YOU</span><span>04 / 04</span></footer>
+    </section>
+  </main>
+
+  <audio id="bgMusic" loop preload="none"><source src="assets/music/Backstreet_Boys_-_Shape_of_My_Heart_(mp3.pm).mp3" type="audio/mpeg"></audio>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
